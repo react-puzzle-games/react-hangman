@@ -16,5 +16,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
