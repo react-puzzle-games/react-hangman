@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import VirtualKeyboard from './VirtualKeyboard';
 import logo from './logo.svg';
@@ -18,7 +19,7 @@ class App extends Component {
     );
   }
 
-  onLetterClick(letter) {
+  onLetterClick(letter: string) {
     console.log(letter);
   }
 }
