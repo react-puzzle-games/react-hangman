@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import VirtualKeyboard from './VirtualKeyboard';
+import Hangman from './Hangman';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,6 +15,9 @@ class App extends Component {
         </div>
         <div className="App-VirtualKeyboard">
           <VirtualKeyboard onClick={this.onLetterClick} />
+        </div>
+        <div className="App-Hangman">
+          <Hangman />
         </div>
       </div>
     );
