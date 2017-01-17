@@ -46,9 +46,13 @@ class App extends Component {
       <div className="App-Word">
         <Word>
           {this.state.letters.map(letter => {
+            const elementKey = letter.value.repeat(
+              Math.floor(Math.random() * 10)
+            );
+
             return (
               <Letter
-                key={letter.value} 
+                key={elementKey} 
                 value={letter.guessed ? letter.value : '_'}
               />
             );
