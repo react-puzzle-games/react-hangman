@@ -1,0 +1,7 @@
+.Word > span {
+  margin-right: 10px;
+}
+
+.Word > span:last-child {
+  margin-right: 0;
+}
