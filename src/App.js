@@ -19,7 +19,9 @@ class App extends Component {
       letters: gameWord.split('').map(letter => ({
         value: letter,
         guessed: false,
-      }))
+      })),
+      guesses: 5,
+      gameState: 'BEGIN',
     }
   }
 
@@ -30,13 +32,34 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React Hangman</h2>
         </div>
-        {this._renderWord()}
+        {this._renderGame()}
+      </div>
+    );
+  }
+
+  _renderGame() {
+    return this.state.gameState === 'BEGIN'
+      ? this._renderNewGame()
+      : this._renderGameOver();
+  }
+
+  _renderNewGame() {
+    return (
+      <div>
         <div className="App-VirtualKeyboard">
           <VirtualKeyboard onClick={this.onLetterClick} />
         </div>
         <div className="App-Hangman">
           <Hangman />
         </div>
+      </div>
+    );
+  }
+
+  _renderGameOver() {
+    return (
+      <div>
+        GAME OVER
       </div>
     );
   }
@@ -52,7 +75,7 @@ class App extends Component {
 
             return (
               <Letter
-                key={elementKey} 
+                key={elementKey}
                 value={letter.guessed ? letter.value : '_'}
               />
             );
@@ -60,6 +83,10 @@ class App extends Component {
         </Word>
       </div>
     );
+  }
+
+  isGuessCorrect(letter) {
+    return this.state.word.indexOf(letter) !== -1;
   }
 
   onLetterClick(letter) {
