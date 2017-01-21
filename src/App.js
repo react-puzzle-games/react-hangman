@@ -142,8 +142,11 @@ class App extends Component {
         return letterObject;
       });
 
-      this.setState({
-        letters,
+      this.setState((prevState, props) => {
+        return {
+          letters,
+          pastGuesses: [letter].concat(prevState.pastGuesses)
+        };
       });
     } else {
       this.setState((prevState, props) => {
