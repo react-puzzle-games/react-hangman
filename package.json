@@ -1,16 +1,17 @@
 {
   "name": "react-hangman",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "devDependencies": {
-    "flow-bin": "^0.37.4",
+    "flow-bin": "0.37.4",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
-    "an-array-of-english-words": "^1.2.0",
-    "node-uuid": "^1.4.7",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "an-array-of-english-words": "1.2.0",
+    "node-uuid": "1.4.7",
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
