@@ -33,7 +33,7 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 - Q: How did you bundle your app?
 - A: `yarn build`
 - Q: The bundle size is huge! Why didn't you use `webpack`'s code split feature?!
-- The only reason why the bundle has a large file size is because I embedded [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words), which is a pretty big dependency. Had I used a backend, I would've saved some KB, at the expense of network latency, of course.
+- A: The only reason why the bundle has a large file size is because I embedded [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words), which is a pretty big dependency. Had I used a backend, I would've saved some KB, at the expense of network latency, of course.
 - Q: So.. can you make the bundle smaller?
 - A: No.
 - Q: How did you write CSS? I thought browsers were already running LESS natively?!
