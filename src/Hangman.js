@@ -24,9 +24,15 @@ class Hangman extends Component {
         {this._renderRightArm()}
         {this._renderLeftLeg()}
         {this._renderRightLeg()}
-        <circle cx="320" cy="190" r="40" fill="black" />
+        {this._renderHead()}
       </svg>
     );
+  }
+
+  _renderHead() {
+    return this.props.body
+        ? <circle cx="320" cy="190" r="40" fill="black" />
+        : null;
   }
 
   _renderBody() {
@@ -69,11 +75,11 @@ Hangman.propTypes = {
 };
 
 Hangman.defaultProps = {
-  body: true,
-  leftArm: true,
-  rightArm: true,
-  leftLeg: true,
-  rightLeg: true,
+  body: false,
+  leftArm: false,
+  rightArm: false,
+  leftLeg: false,
+  rightLeg: false,
 };
 
 export default Hangman;

@@ -3,11 +3,11 @@ import Hangman from './Hangman';
 
 export default (attemptsLeft) => {
   let props = {
-    leftArm: attemptsLeft === 5,
-    rightArm: attemptsLeft >= 4,
-    leftLeg: attemptsLeft >= 3,
-    rightLeg: attemptsLeft >= 2,
-    body: attemptsLeft >= 1,
+    body: attemptsLeft <= 4,
+    leftArm: attemptsLeft <= 3,
+    rightArm: attemptsLeft <= 2,
+    leftLeg: attemptsLeft <= 1,
+    rightLeg: attemptsLeft === 0,
   };
 
   return <Hangman {...props} />
