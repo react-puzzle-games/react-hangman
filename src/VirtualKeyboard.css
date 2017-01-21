@@ -1,3 +1,7 @@
+.VirtualKeyboard {
+  text-transform: uppercase;
+}
+
 .VirtualKeyboard .LettersRow {
   width: 30%;
 }

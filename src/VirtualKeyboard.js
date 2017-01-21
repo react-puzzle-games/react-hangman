@@ -21,13 +21,15 @@ class VirtualKeyboard extends Component {
   }
 
   _renderRow(letters) {
-    const children = letters.map(letter => (
-      <LetterBlock
-        value={letter}
-        onClick={this.props.onClick.bind(null, letter)}
-        key={`LetterBlock-${letter}`}
-      />
-    ));
+    const children = letters
+      .filter(letter => !this.props.excluded.includes(letter))
+      .map(letter => (
+        <LetterBlock
+          value={letter}
+          onClick={this.props.onClick.bind(null, letter)}
+          key={`LetterBlock-${letter}`}
+        />
+      ));
 
     return (
       <LettersRow>
@@ -39,10 +41,15 @@ class VirtualKeyboard extends Component {
 
 VirtualKeyboard.propTypes = {
   onClick: PropTypes.func.isRequired,
-}
+  excludedLetters: PropTypes.arrayOf(PropTypes.string),
+};
 
-VirtualKeyboard.FIRST_ROW = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
-VirtualKeyboard.SECOND_ROW = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'];
-VirtualKeyboard.THIRD_ROW = ['Z', 'X', 'C', 'V', 'B', 'N', 'M'];
+VirtualKeyboard.defaultProps = {
+  excludedLetters: [],
+};
+
+VirtualKeyboard.FIRST_ROW = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
+VirtualKeyboard.SECOND_ROW = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+VirtualKeyboard.THIRD_ROW = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
 export default VirtualKeyboard;

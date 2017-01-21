@@ -5,9 +5,7 @@ class LetterBlock extends Component {
   render() {
     return (
       <div className="LetterBlock">
-        <span
-          onClick={this.props.onClick}
-          className={this.props.disabled ? 'disabled' : ''}>
+        <span onClick={this.props.onClick}>
           {this.props.value}
         </span>
       </div>
@@ -18,11 +16,6 @@ class LetterBlock extends Component {
 LetterBlock.propTypes = {
   value: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  disabled: PropTypes.bool,
-};
-
-LetterBlock.defaultProps = {
-  disabled: false,
 };
 
 export default LetterBlock;

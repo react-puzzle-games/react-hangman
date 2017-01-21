@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import uuid from 'node-uuid';
 
 import randomWord from './random-word';
+import AttemptsLeft from './AttemptsLeft';
 import Letter from './Letter';
 import Word from './Word';
 import VirtualKeyboard from './VirtualKeyboard';
@@ -14,6 +15,8 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.onLetterClick = this.onLetterClick.bind(this)
+
     const gameWord = randomWord();
     this.state = {
       word: gameWord,
@@ -23,6 +26,7 @@ class App extends Component {
       })),
       guesses: 5,
       gameState: 'BEGIN',
+      failedGuesses: [],
     }
   }
 
@@ -50,8 +54,14 @@ class App extends Component {
         <div className="App-Word">
           {this._renderWord()}
         </div>
+        <div className="App-AttemptsLeft">
+          <AttemptsLeft attempts={this.state.guesses} />
+        </div>
         <div className="App-VirtualKeyboard">
-          <VirtualKeyboard onClick={this.onLetterClick} />
+          <VirtualKeyboard
+            excluded={this.state.failedGuesses}
+            onClick={this.onLetterClick}
+          />
         </div>
         <div className="App-Hangman">
           <Hangman />
@@ -74,9 +84,7 @@ class App extends Component {
         <Word>
           {this.state.letters.map(letter => {
             return (
-              <Letter
-                key={uuid()}
-                value={letter.guessed ? letter.value : '_'}
+              <Letter key={uuid()} value={letter.guessed ? letter.value : '_'}
               />
             );
           })}
@@ -85,12 +93,43 @@ class App extends Component {
     );
   }
 
-  isGuessCorrect(letter) {
-    return this.state.word.indexOf(letter) !== -1;
-  }
+  onLetterClick(letter, e) {
+    e.preventDefault();
 
-  onLetterClick(letter) {
-    console.log(letter);
+    const firstIndex = this.state.word.indexOf(letter)
+    if (firstIndex !== -1) {
+      const letters = this.state.letters.map(letterObject => {
+        if (letterObject.value === letter) {
+          return Object.assign({}, letterObject, {
+            guessed: true,
+          });
+        }
+
+        return letterObject;
+      });
+
+      this.setState({
+        letters,
+      });
+    } else {
+      this.setState((prevState, props) => {
+        // Update number of attempts left
+        const guessesLeft = prevState.guesses - 1;
+        let stateUpdate = {
+          guesses: guessesLeft,
+        };
+
+        // Kill the game if needed
+        if (guessesLeft === 0) {
+          stateUpdate.gameState = 'OVER';
+        }
+
+        // Update the letters already tried
+        stateUpdate.failedGuesses = [letter].concat(prevState.failedGuesses);
+
+        return stateUpdate;
+      });
+    }
   }
 }
 

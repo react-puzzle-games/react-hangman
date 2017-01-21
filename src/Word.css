@@ -1,5 +1,6 @@
 .Word > span {
   margin-right: 10px;
+  text-transform: uppercase;
 }
 
 .Word > span:last-child {
