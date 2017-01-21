@@ -38,30 +38,51 @@ class App extends Component {
           <h2>React Hangman</h2>
         </div>
         {this._renderGame()}
+        {this._renderFooter()}
       </div>
     );
   }
 
   _renderGame() {
     return this.state.gameState === 'BEGIN'
-      ? this._renderNewGame()
-      : this._renderGameOver();
+      ? (
+        <div className="App-content">
+          {this._renderNewGame()}
+        </div>
+      )
+      : (
+        <div className="App-content">
+          {this._renderGameOver()}
+        </div>
+      );
+  }
+
+  _renderFooter() {
+    return (
+      <div className="App-footer">
+        <h5>Made with <span style={{color: 'red'}}>&#9829;</span> by <a
+            target="_blank"
+            href="https://twitter.com/ovidiubute">Ovidiu
+          </a> using React and create-react-app boilerplate &#169; 2017
+        </h5>
+      </div>
+    );
   }
 
   _renderNewGame() {
     return (
-      <div>
-        <div className="App-Word">
+      <div className="App-SideBySide">
+        <div className="App-InputPanel">
           {this._renderWord()}
-        </div>
-        <div className="App-AttemptsLeft">
-          <AttemptsLeft attempts={this.state.guesses} />
-        </div>
-        <div className="App-VirtualKeyboard">
-          <VirtualKeyboard
-            excluded={this.state.pastGuesses}
-            onClick={this.onLetterClick}
-          />
+          <div className="App-AttemptsLeft">
+            <AttemptsLeft attempts={this.state.guesses} />
+          </div>
+          <div className="App-VirtualKeyboard">
+            <VirtualKeyboard
+              excluded={this.state.pastGuesses}
+              onClick={this.onLetterClick}
+            />
+          </div>
         </div>
         <div className="App-Hangman">
           {hangmanAttempts(this.state.guesses)}
@@ -72,8 +93,8 @@ class App extends Component {
 
   _renderGameOver() {
     return (
-      <div>
-        GAME OVER
+      <div className="App-GameOver">
+        <span>GAME OVER</span>
       </div>
     );
   }

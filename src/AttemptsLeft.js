@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import './AttemptsLeft.css';
+
 class AttemptsLeft extends Component {
   render() {
     return (

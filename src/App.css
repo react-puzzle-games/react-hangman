@@ -1,17 +1,42 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App a {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+.App a:hover {
+  text-decoration: none;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 10vh;
 }
 
 .App-header {
+  flex: .2;
+  text-align: center;
   background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  padding: 8px;
+  color: #fff;
+}
+
+.App-content {
+  flex: .7;
+  padding: 0 50px;
+}
+
+.App-footer {
+  flex: .1;
+  font-size: 0.9em;
+  font-style: italic;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
@@ -19,11 +44,34 @@
   to { transform: rotate(360deg); }
 }
 
-.App-VirtualKeyboard {
+.App-InputPanel {
+  flex: .5 1 50%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+.App-InputPanel .App-Word {
+  flex: .1;
+}
+
+.App-InputPanel .App-AttemptsLeft {
+  flex: .1;
+}
+
+.App-InputPanel .App-VirtualKeyboard {
+  flex: .8;
+}
+
+.App-Hangman {
+  flex: .5 1 50%;
+  margin-top: -80px;
 }
 
 .App-VirtualKeyboard .VirtualKeyboard {
   width: 100%;
+}
+
+.App-SideBySide {
+  display: flex;
+  height: 100%;
 }
