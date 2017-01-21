@@ -4,7 +4,6 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "flow-bin": "0.37.4",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
@@ -17,8 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
