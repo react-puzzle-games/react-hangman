@@ -6,7 +6,7 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 ## FAQ
 - Q: Is it really possible to write a web app in 2017 without all of the above?
 - A: Yes.
-- Q: But, you're using `React` 15, why didn't you use stateless components?!
+- Q: But, you're using `React15`, why didn't you use stateless components?!
 - A: The real question is, had I did, would my code have been any better for it?
 - Q: Yes.
 - A: Why?
