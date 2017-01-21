@@ -85,8 +85,8 @@ class App extends Component {
     const gameWon = this.state.gameState === 'WIN';
     const content = hasAttemptsLeft
         ? gameWon
-        ? this._renderGameWin()
-        : this._renderKeyboard()
+          ? this._renderGameWin()
+          : this._renderKeyboard()
         : this._renderGameOver();
 
     return (
