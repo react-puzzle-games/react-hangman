@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'node-uuid';
 
 import randomWord from './random-word';
 import Letter from './Letter';
@@ -46,6 +47,9 @@ class App extends Component {
   _renderNewGame() {
     return (
       <div>
+        <div className="App-Word">
+          {this._renderWord()}
+        </div>
         <div className="App-VirtualKeyboard">
           <VirtualKeyboard onClick={this.onLetterClick} />
         </div>
@@ -69,13 +73,9 @@ class App extends Component {
       <div className="App-Word">
         <Word>
           {this.state.letters.map(letter => {
-            const elementKey = letter.value.repeat(
-              Math.floor(Math.random() * 10)
-            );
-
             return (
               <Letter
-                key={elementKey}
+                key={uuid()}
                 value={letter.guessed ? letter.value : '_'}
               />
             );
