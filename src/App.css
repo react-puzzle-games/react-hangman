@@ -62,6 +62,12 @@
   flex: .8;
 }
 
+.App-InputPanel .App-GameOver {
+  flex: .8;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
 .App-Hangman {
   flex: .5 1 50%;
   margin-top: -80px;

@@ -43,18 +43,61 @@ class App extends Component {
     );
   }
 
+  _renderAttemptsLeft() {
+    return (
+      <div className="App-AttemptsLeft">
+        <AttemptsLeft attempts={this.state.guesses} />
+      </div>
+    );
+  }
+
+  _renderKeyboard() {
+    return (
+      <div className="App-VirtualKeyboard">
+        <VirtualKeyboard
+          excluded={this.state.pastGuesses}
+          onClick={this.onLetterClick}
+        />
+      </div>
+    );
+  }
+
+  _renderGameOver() {
+    return (
+      <div className="App-GameOver">
+        <span>GAME OVER ☠️</span>
+      </div>
+    )
+  }
+
+  _renderInputPanel() {
+    const hasAttemptsLeft = this.state.guesses > 0;
+    const content = hasAttemptsLeft ? (
+      this._renderKeyboard()
+    ) : (
+      this._renderGameOver()
+    );
+
+    return (
+      <div className="App-InputPanel">
+        {this._renderWord()}
+        {this._renderAttemptsLeft()}
+        {content}
+      </div>
+    );
+  }
+
   _renderGame() {
-    return this.state.gameState === 'BEGIN'
-      ? (
-        <div className="App-content">
-          {this._renderNewGame()}
+    return (
+      <div className="App-content">
+        <div className="App-SideBySide">
+          {this._renderInputPanel()}
+          <div className="App-Hangman">
+            {hangmanAttempts(this.state.guesses)}
+          </div>
         </div>
-      )
-      : (
-        <div className="App-content">
-          {this._renderGameOver()}
-        </div>
-      );
+      </div>
+    );
   }
 
   _renderFooter() {
@@ -65,36 +108,6 @@ class App extends Component {
             href="https://twitter.com/ovidiubute">Ovidiu
           </a> using React and create-react-app boilerplate &#169; 2017
         </h5>
-      </div>
-    );
-  }
-
-  _renderNewGame() {
-    return (
-      <div className="App-SideBySide">
-        <div className="App-InputPanel">
-          {this._renderWord()}
-          <div className="App-AttemptsLeft">
-            <AttemptsLeft attempts={this.state.guesses} />
-          </div>
-          <div className="App-VirtualKeyboard">
-            <VirtualKeyboard
-              excluded={this.state.pastGuesses}
-              onClick={this.onLetterClick}
-            />
-          </div>
-        </div>
-        <div className="App-Hangman">
-          {hangmanAttempts(this.state.guesses)}
-        </div>
-      </div>
-    );
-  }
-
-  _renderGameOver() {
-    return (
-      <div className="App-GameOver">
-        <span>GAME OVER</span>
       </div>
     );
   }
