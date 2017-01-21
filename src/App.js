@@ -6,7 +6,7 @@ import AttemptsLeft from './AttemptsLeft';
 import Letter from './Letter';
 import Word from './Word';
 import VirtualKeyboard from './VirtualKeyboard';
-import Hangman from './Hangman';
+import hangmanAttempts from './HangmanAttempts';
 
 import logo from './logo.svg';
 import './App.css';
@@ -26,7 +26,7 @@ class App extends Component {
       })),
       guesses: 5,
       gameState: 'BEGIN',
-      failedGuesses: [],
+      pastGuesses: [],
     }
   }
 
@@ -59,12 +59,12 @@ class App extends Component {
         </div>
         <div className="App-VirtualKeyboard">
           <VirtualKeyboard
-            excluded={this.state.failedGuesses}
+            excluded={this.state.pastGuesses}
             onClick={this.onLetterClick}
           />
         </div>
         <div className="App-Hangman">
-          <Hangman />
+          {hangmanAttempts(this.state.guesses)}
         </div>
       </div>
     );
@@ -125,7 +125,7 @@ class App extends Component {
         }
 
         // Update the letters already tried
-        stateUpdate.failedGuesses = [letter].concat(prevState.failedGuesses);
+        stateUpdate.pastGuesses = [letter].concat(prevState.pastGuesses);
 
         return stateUpdate;
       });

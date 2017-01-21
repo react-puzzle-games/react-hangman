@@ -4,8 +4,8 @@ import './LetterBlock.css';
 class LetterBlock extends Component {
   render() {
     return (
-      <div className="LetterBlock">
-        <span onClick={this.props.onClick}>
+      <div onClick={this.props.onClick} className="LetterBlock">
+        <span>
           {this.props.value}
         </span>
       </div>
