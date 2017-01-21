@@ -24,11 +24,11 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 - A: I'm using the excellent [create-react-app](https://github.com/facebookincubator/create-react-app) project and it takes care of that for you.
 - Q: So how do you update the `webpack` config?
 - A: I don't.
-- Q: Are you using `webpack` 2?
+- Q: Are you using `webpack2`?
 - A: No.
 - Q: Why not?
 - A: How would it help me in a hangman game?
-- Q: `webpack` 2 just got released.
+- Q: `webpack2` just got released.
 - A: Is that a question?
 - Q: How did you bundle your app?
 - A: `yarn build`
