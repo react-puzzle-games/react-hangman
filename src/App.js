@@ -128,8 +128,14 @@ class App extends Component {
       <div className="App-Word">
         <Word>
           {this.state.letters.map(letter => {
+            const letterValue = (
+              this.state.gameState === 'OVER' || letter.guessed
+            ) ? letter.value : '_';
+
             return (
-              <Letter key={uuid()} value={letter.guessed ? letter.value : '_'}
+              <Letter
+                key={uuid()}
+                value={letterValue}
               />
             );
           })}
