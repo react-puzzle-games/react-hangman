@@ -1,5 +1,5 @@
 ## Hangman game
-A basic game of Hangman written in React using `create-react-app` scaffolding.
+A basic game of Hangman written in [React](https://facebook.github.io/react/) using [Create React App](https://github.com/facebookincubator/create-react-app) scaffolding.
 
 Visit [http://rh.oviprojects.xyz/](http://rh.oviprojects.xyz/) to play the game.
 
