@@ -1,5 +1,11 @@
 .LettersRow {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
+
+.LettersRow > .LetterBlock {
+  margin-right: 1em;
+}
+
+.LettersRow > .LetterBlock:last-child {
+  margin-right: 0;
 }

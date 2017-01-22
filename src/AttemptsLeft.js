@@ -6,7 +6,10 @@ class AttemptsLeft extends Component {
   render() {
     return (
       <div className="AttemptsLeft">
-        <span>Retries left: {this.props.attempts}</span>
+        <span>Retries left: <span className="AttemptsLeft-Number">
+            {this.props.attempts}
+          </span>
+        </span>
       </div>
     );
   }

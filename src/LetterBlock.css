@@ -1,8 +1,20 @@
 .LetterBlock {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   border: 1px solid #999;
   border-radius: 5px;
   padding: 5px;
-  min-width: 20px;
+  min-width: 1.2em;
   color: #000;
+}
+
+.LetterBlock:hover {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to bottom, #000 0%, #000 100%);
+}
+
+.LetterBlock > span {
+  font-weight: 400;
 }

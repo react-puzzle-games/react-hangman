@@ -2,6 +2,10 @@
   text-transform: uppercase;
 }
 
-.VirtualKeyboard .LettersRow {
-  width: 30%;
+.VirtualKeyboard > div {
+  margin-bottom: 8px;
+}
+
+.VirtualKeyboard > div:last-child {
+  margin-bottom: 0;
 }
