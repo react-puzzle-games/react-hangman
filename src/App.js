@@ -11,6 +11,10 @@ import hangmanAttempts from './HangmanAttempts';
 import logo from './logo.svg';
 import './App.css';
 
+const GAME_OVER = Symbol('OVER');
+const GAME_STARTED = Symbol('BEGIN');
+const GAME_WON = Symbol('WIN');
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -75,14 +79,16 @@ class App extends Component {
   _renderRestart() {
     return (
       <div className="App-Restart">
-        <button onClick={this.onRestartClick}>Try again</button>
+        <button onClick={this.onRestartClick}>
+          {this.state.gameState === GAME_WON ? 'Play' : 'Try'} again
+        </button>
       </div>
     );
   }
 
   _renderInputPanel() {
     const hasAttemptsLeft = this.state.guesses > 0;
-    const gameWon = this.state.gameState === 'WIN';
+    const gameWon = this.state.gameState === GAME_WON;
     const content = hasAttemptsLeft
         ? gameWon
           ? this._renderGameWin()
@@ -129,7 +135,7 @@ class App extends Component {
         <Word>
           {this.state.letters.map(letter => {
             const letterValue = (
-              this.state.gameState === 'OVER' || letter.guessed
+              this.state.gameState === GAME_OVER || letter.guessed
             ) ? letter.value : '_';
 
             return (
@@ -153,7 +159,7 @@ class App extends Component {
         guessed: false,
       })),
       guesses: 5,
-      gameState: 'BEGIN',
+      gameState: GAME_STARTED,
       pastGuesses: [],
     };
   }
@@ -182,7 +188,7 @@ class App extends Component {
         return {
           letters,
           pastGuesses: [letter].concat(prevState.pastGuesses),
-          gameState: gameWon ? 'WIN' : 'BEGIN',
+          gameState: gameWon ? GAME_WON : GAME_STARTED,
         };
       });
     } else {
@@ -195,7 +201,7 @@ class App extends Component {
 
         // Kill the game if needed
         if (guessesLeft === 0) {
-          stateUpdate.gameState = 'OVER';
+          stateUpdate.gameState = GAME_OVER;
         }
 
         // Update the letters already tried
