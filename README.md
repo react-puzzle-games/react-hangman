@@ -14,11 +14,13 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 - A: ...
 - Q: How did you manage state without Redux?!
 - A: By using local React state.
-- Q: What's that? Is it like `localStorage`?
-- A: ...
-- Q: You could've at least used `Flux`!
+- Q: What's that?
+- A: It's `React`'s built-in state management system. Each component can store arbitrary data and pass it down to its children via `props`.
+- Q: That sounds very difficult. You could've at least used `Flux` if `Redux` is too hard for you to understand.
 - A: You don't need state management for a hangman game.
-- Q: Yes but your code could have been better, why not use it?
+- Q: No, I think you don't understand `Redux`. It's so much faster than anything else.
+- A: Fast at what?
+- Q: At everything.
 - A: Next question.
 - Q: I can't find your `webpack.config.js` file, where is it?
 - A: I'm using the excellent [create-react-app](https://github.com/facebookincubator/create-react-app) project and it takes care of that for you.
@@ -36,8 +38,16 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 - A: The only reason why the bundle has a large file size is because I embedded [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words), which is a pretty big dependency. Had I used a backend, I would've saved some KB, at the expense of network latency, of course.
 - Q: So.. can you make the bundle smaller?
 - A: No.
-- Q: How did you write CSS? I thought browsers were already running LESS natively?!
-- A: There's no support for anything other than CSS in create-react-app, and, frankly, I'm glad they didn't add it.
+- Q: What other dependencies did you use?
+- A: You *could* check `package.json`, you know. The only dependencies are `create-react-app`, `an-array-of-english-words`, and `node-uuid`.
+- Q: `node-uuid`?
+- A: I needed a way to generate consistently unique keys for the components that make up the word during the game. The only entropy I had was the letter, but a word can have the same letter more than once, so I used `node-uuid` to generate a unique identifier.
+- Q: How did you write CSS? I thought browsers were already running `LESS` natively?!
+- A: Browsers only support CSS... There's no support for anything other than CSS in create-react-app, and, frankly, I'm glad they didn't add it.
+- Q: You mean you don't know `LESS`?
+- A: I do know how to write `LESS` but for a simple app it doesn't bring much value.
+- Q: It is better, though. You should learn it.
+- A: You should teach me...
 - Q: How is the hangman drawn?
 - A: With `SVG`.
 - Q: `SVG` is finished. Why didn't you use `HTML5 Canvas`?
