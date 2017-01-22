@@ -4,7 +4,11 @@ A basic game of Hangman written in React using create-react-app scaffolding. The
 There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, no Next.js, no TypeScript, LiveScript, Elm, no LESS, SASS or Stylus.
 
 ## FAQ
-- Q: Is it really possible to write a web app in 2017 without all of the above?
+- Q: Why did you write `react-hangman`?
+- A: Because I love games and they're fun to write.
+- Q: Still, this game is very simple. Why write it at all?
+- A: It was a learning experience. Even though I've been writing `React` for almost a year, I still found new things to learn while writing this game.
+- Q: Is it really possible to write a web app in 2017 using only `React`?
 - A: Yes.
 - Q: But, you're using `React15`, why didn't you use stateless components?!
 - A: The real question is, had I did, would my code have been any better for it?
@@ -13,7 +17,7 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 - Q: Because stateless components are better.
 - A: ...
 - Q: How did you manage state without Redux?!
-- A: By using local React state.
+- A: By using local `React` state.
 - Q: What's that?
 - A: It's `React`'s built-in state management system. Each component can store arbitrary data and pass it down to its children via `props`.
 - Q: That sounds very difficult. You could've at least used `Flux` if `Redux` is too hard for you to understand.
@@ -34,7 +38,9 @@ There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, n
 - A: Is that a question?
 - Q: How did you bundle your app?
 - A: `yarn build`
-- Q: The bundle size is huge! Why didn't you use `webpack`'s code split feature?!
+- Q: So cool that you're using `yarn`. It's so much faster than `npm`!
+- A: Um.. yeah. `yarn` is pretty cool.
+- Q: The game's bundle size is huge! Can you make it smaller?
 - A: The only reason why the bundle has a large file size is because I embedded [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words), which is a pretty big dependency. Had I used a backend, I would've saved some KB, at the expense of network latency, of course.
 - Q: So.. can you make the bundle smaller?
 - A: No.
