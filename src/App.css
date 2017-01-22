@@ -27,7 +27,7 @@
 
 .App-content {
   flex: .7;
-  padding: 0 50px;
+  padding-left: 8px;
 }
 
 .App-footer {
