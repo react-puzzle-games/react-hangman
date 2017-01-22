@@ -1,7 +1,18 @@
 ## Hangman game
-A basic game of Hangman written in React using create-react-app scaffolding. There are no bells and whistles to be found here.
+A basic game of Hangman written in React using `create-react-app` scaffolding.
 
-There is no CSS-in-JS, no ES2016, ES2017, no Webpack, no Redux, Flux, Flummox, no Next.js, no TypeScript, LiveScript, Elm, no LESS, SASS or Stylus.
+Visit [http://rh.oviprojects.xyz/](http://rh.oviprojects.xyz/) to play the game.
+
+There are no bells and whistles to be found here. Consider this project as an experiment in restraint, and as a good tutorial for developing in `React` without additional libraries.
+
+- This project does not adhere to the `CSS-in-JS` movement, so there's no `radium`, `glamor`, `styled-components`, `uranium`, `smart-css`, or `aphordite`.
+- The language level is `ES6` with `JSX`, so no `public class fields`, no `function bind syntax`, no `zones`, no `Observable`, no `decorators` or other stage 0 up to 2 features. I love `Babel` as much as anyone, but I'd like someone reading this project 4 years from now to still understand the syntax.
+- Because of `create-react-app` I don't directly use `webpack`, at least on the surface, because under the hood that's exactly what the project is built with. Not having to write the configuration file lets me concentrate on the code.
+- In addition there is no `Redux`, `Flux`, `Flummox`, `Alt`, `Fluxxor`, `MartyJS`, `McFly`, `Fluxible`, `Delorean` (kinda sensing a theme here), `Lux`, `Reflux` or `Fluxy`. State management libraries are insanely great, but only if you need them.
+- I could have used a backend but I'm not building an MMO, so I decided against it. Obviously that means there's no `Next.js`.
+- I like to think JavaScript has come a long way since I first started using it circa 2005, so I choose not to use: `TypeScript`, `CoffeeScript`, `LiveScript` or `Elm`, though I'd love to write `Elm` one day.
+- `create-react-app` uses only CSS so there's no `LESS`, `SASS` or `Stylus`.
+- And since I'm using `ES6` I didn't need `lodash`, `underscore` or `Ramda`.
 
 ## FAQ
 - Q: Why did you write `react-hangman`?
