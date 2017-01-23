@@ -53,18 +53,10 @@ There are no bells and whistles to be found here. Consider this project as an ex
 - A: Um.. yeah. `yarn` is pretty cool.
 - Q: The game's bundle size is huge! Can you make it smaller?
 - A: The only reason why the bundle has a large file size is because I embedded [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words), which is a pretty big dependency. Had I used a backend, I would've saved some KB, at the expense of network latency, of course.
-- Q: So.. can you make the bundle smaller?
-- A: No.
-- Q: What other dependencies did you use?
-- A: You *could* check `package.json`, you know. The only dependencies are `create-react-app`, `an-array-of-english-words`, and `node-uuid`.
-- Q: `node-uuid`?
-- A: I needed a way to generate consistently unique keys for the components that make up the word during the game. The only entropy I had was the letter, but a word can have the same letter more than once, so I used `node-uuid` to generate a unique identifier.
-- Q: How did you write CSS? I thought browsers were already running `LESS` natively?!
-- A: Browsers only support CSS... There's no support for anything other than CSS in create-react-app, and, frankly, I'm glad they didn't add it.
+- Q: Was it strange to write CSS after years of `LESS`?
+- A: There's no support for anything other than CSS in create-react-app, and, frankly, I'm glad they didn't add it.
 - Q: You mean you don't know `LESS`?
 - A: I do know how to write `LESS` but for a simple app it doesn't bring much value.
-- Q: It is better, though. You should learn it.
-- A: You should teach me...
 - Q: How is the hangman drawn?
 - A: With `SVG`.
 - Q: `SVG` is finished. Why didn't you use `HTML5 Canvas`?

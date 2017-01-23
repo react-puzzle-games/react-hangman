@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uuid from 'node-uuid';
 
 import randomWord from './random-word';
 import AttemptsLeft from './AttemptsLeft';
@@ -133,14 +132,14 @@ class App extends Component {
     return (
       <div className="App-Word">
         <Word>
-          {this.state.letters.map(letter => {
+          {this.state.letters.map((letter, i) => {
             const letterValue = (
               this.state.gameState === GAME_OVER || letter.guessed
             ) ? letter.value : '_';
 
             return (
               <Letter
-                key={uuid()}
+                key={`word-letter-${i}`}
                 value={letterValue}
               />
             );
