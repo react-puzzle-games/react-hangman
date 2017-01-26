@@ -47,10 +47,6 @@ There are no bells and whistles to be found here. Consider this project as an ex
 - A: How would it help me in a hangman game?
 - Q: `webpack2` just got released.
 - A: Is that a question?
-- Q: How did you bundle your app?
-- A: `yarn build`
-- Q: So cool that you're using `yarn`. It's so much faster than `npm`!
-- A: Um.. yeah. `yarn` is pretty cool.
 - Q: The game's bundle size is huge! Can you make it smaller?
 - A: The only reason why the bundle has a large file size is because I embedded [an-array-of-english-words](https://github.com/zeke/an-array-of-english-words), which is a pretty big dependency. Had I used a backend, I would've saved some KB, at the expense of network latency, of course.
 - Q: Was it strange to write CSS after years of `LESS`?
@@ -61,8 +57,6 @@ There are no bells and whistles to be found here. Consider this project as an ex
 - A: With `SVG`.
 - Q: `SVG` is finished. Why didn't you use `HTML5 Canvas`?
 - A: ...it's just a man hanging from a stick. Why would I use the `Canvas` API for that?
-- Q: `SVG` is..
-- A: Yeah, you know what? I used `Canvas` after all.
 - Q: What library did you use for the stick man?
 - A: I just rendered it with the S.. `Canvas` API with inspiration from another [Hangman project](https://github.com/dannynelson/angular-hangman).
 - Q: Are you using `Jest` to test your app?
@@ -79,8 +73,6 @@ There are no bells and whistles to be found here. Consider this project as an ex
 - A: This project is not on `npm` and it won't be published. It's not a library, it's just a sample project on how to use `React` to write a fairly basic game.
 - Q: What IDE did you use to write the source code?
 - A: Atom with some plugins for `Babel` and `ESLint`.
-- Q: Why didn't you...
-- A: Please stop.
 
 ## License
 MIT
