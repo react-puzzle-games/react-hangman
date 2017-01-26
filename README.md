@@ -5,7 +5,7 @@ Visit [http://rh.oviprojects.xyz/](http://rh.oviprojects.xyz/) to play the game.
 
 There are no bells and whistles to be found here. Consider this project as an experiment in restraint, and as a good tutorial for developing in `React` without additional libraries.
 
-- This project does not adhere to the `CSS-in-JS` movement, so there's no `radium`, `glamor`, `styled-components`, `uranium`, `smart-css`, or `aphordite`.
+- This project does not adhere to the `CSS-in-JS` movement, so there's no `radium`, `glamor`, `styled-components`, `uranium`, `smart-css`, or `aphrodite`.
 - The language level is `ES6` with `JSX`, so no `public class fields`, no `function bind syntax`, no `zones`, no `Observable`, no `decorators` or other stage 0 up to 2 features. I love `Babel` as much as anyone, but I'd like someone reading this project 4 years from now to still understand the syntax.
 - Because of `create-react-app` I don't directly use `webpack`, at least on the surface, because under the hood that's exactly what the project is built with. Not having to write the configuration file lets me concentrate on the code.
 - In addition there is no `Redux`, `Flux`, `Flummox`, `Alt`, `Fluxxor`, `MartyJS`, `McFly`, `Fluxible`, `Delorean` (kinda sensing a theme here), `Lux`, `Reflux` or `Fluxy`. State management libraries are insanely great, but only if you need them.
