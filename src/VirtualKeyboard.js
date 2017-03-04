@@ -22,7 +22,7 @@ class VirtualKeyboard extends Component {
 
   _renderRow(letters) {
     const children = letters
-      .filter(letter => !this.props.excluded.includes(letter))
+      .filter(letter => this.props.excluded.indexOf(letter) === -1)
       .map(letter => (
         <LetterBlock
           value={letter}
