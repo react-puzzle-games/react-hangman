@@ -41,11 +41,11 @@ class VirtualKeyboard extends Component {
 
 VirtualKeyboard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  excludedLetters: PropTypes.arrayOf(PropTypes.string),
+  excluded: PropTypes.arrayOf(PropTypes.string),
 };
 
 VirtualKeyboard.defaultProps = {
-  excludedLetters: [],
+  excluded: [],
 };
 
 VirtualKeyboard.FIRST_ROW = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
