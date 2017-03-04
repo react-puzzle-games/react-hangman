@@ -22,7 +22,7 @@ class VirtualKeyboard extends Component {
 
   _renderRow(letters) {
     const children = letters
-      .filter(letter => !this.props.excluded.includes(letter))
+      .filter(letter => this.props.excluded.indexOf(letter) === -1)
       .map(letter => (
         <LetterBlock
           value={letter}
@@ -41,11 +41,11 @@ class VirtualKeyboard extends Component {
 
 VirtualKeyboard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  excludedLetters: PropTypes.arrayOf(PropTypes.string),
+  excluded: PropTypes.arrayOf(PropTypes.string),
 };
 
 VirtualKeyboard.defaultProps = {
-  excludedLetters: [],
+  excluded: [],
 };
 
 VirtualKeyboard.FIRST_ROW = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
