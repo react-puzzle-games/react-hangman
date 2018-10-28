@@ -6,4 +6,4 @@ Hangman game written in [React](https://facebook.github.io/react/) using [Create
 Visit [https://hangman-game.netlify.com/](https://hangman-game.netlify.com/) to play the game.
 
 ### License
-MIT
+All of the games under the [React Puzzle Games](https://github.com/react-puzzle-games) organization are [MIT licensed](./LICENSE).
