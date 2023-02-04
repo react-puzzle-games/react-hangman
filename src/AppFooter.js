@@ -15,7 +15,7 @@ class AppFooter extends Component {
         </a>
         <h5>Made with <span style={{color: 'red'}}>&#9829;</span> by <a
             target="_blank"
-            href="https://twitter.com/ovidiubute">Ovidiu
+            href="https://ovidiu.dev">Ovidiu
           </a> using React and create-react-app boilerplate
         </h5>
       </div>
