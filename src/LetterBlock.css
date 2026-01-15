@@ -1,20 +1,24 @@
 .LetterBlock {
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
-  border: 1px solid #999;
-  border-radius: 5px;
-  padding: 5px;
-  min-width: 1.2em;
-  color: #000;
+  width: 38px;
+  height: 38px;
+  background: var(--tile-color);
+  color: var(--text-light);
+  transition: background 0.15s ease;
 }
 
 .LetterBlock:hover {
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(to bottom, #000 0%, #000 100%);
+  background: var(--tile-hover);
+}
+
+.LetterBlock:active {
+  transform: scale(0.96);
 }
 
 .LetterBlock > span {
   font-weight: 400;
+  font-size: 0.9em;
 }

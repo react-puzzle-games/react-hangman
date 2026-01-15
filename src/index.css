@@ -1,6 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #e8e8e8;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d0d0d0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  min-height: 100vh;
+  color: #333;
+}
+
+:root {
+  --header-bg: #2d2d2d;
+  --tile-color: #c4897a;
+  --tile-hover: #d49a8b;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  --success: #5a9a6e;
+  --danger: #c4897a;
+  --link-color: #c4897a;
 }

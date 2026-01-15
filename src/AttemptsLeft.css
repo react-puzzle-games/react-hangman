@@ -1,8 +1,9 @@
 .AttemptsLeft {
-  font-style: italic;
   font-size: 0.9em;
+  color: var(--text-muted);
 }
 
 .AttemptsLeft-Number {
-  color: #ff6600;
+  font-weight: 600;
+  color: var(--tile-color);
 }

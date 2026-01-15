@@ -1,15 +1,31 @@
 .App-footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: .1;
-  font-size: 0.9em;
-  font-style: italic;
-  background-color: #000;
-  color: #fff;
+  gap: 8px;
+  padding: 20px;
+  background: var(--header-bg);
+  font-size: 0.85em;
+  color: var(--text-light);
   text-align: center;
 }
 
+.App-footer > a {
+  display: flex;
+  align-items: center;
+}
+
+.App-footer > a img {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.App-footer > a:hover img {
+  opacity: 1;
+}
+
 .App-footer > h5 {
-  margin-left: 8px;
+  margin: 0;
+  font-weight: 400;
 }

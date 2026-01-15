@@ -6,9 +6,10 @@
 
 .App a {
   text-decoration: none;
-  color: #ff6600;
+  color: var(--link-color);
+  transition: color 0.2s ease;
 }
 
 .App a:hover {
-  text-decoration: none;
+  color: var(--tile-hover);
 }

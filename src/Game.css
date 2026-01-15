@@ -1,45 +1,61 @@
 .Game-content {
-  flex: .7;
-  padding-left: 8px;
-}
-
-.Game-InputPanel {
-  flex: .5 1 50%;
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  padding-top: 8px;
-}
-
-.Game-InputPanel .Game-Word {
-  flex: .1;
-}
-
-.Game-InputPanel .Game-AttemptsLeft {
-  flex: .1;
-}
-
-.Game-InputPanel .Game-VirtualKeyboard {
-  flex: .8;
-}
-
-.Game-InputPanel .Game-GameWin {
-  flex: .8;
-  font-weight: 600;
-  font-size: 1.3em;
-}
-
-.Game-InputPanel .Game-GameOver {
-  flex: .8;
-  font-weight: 600;
-  font-size: 1.3em;
-}
-
-.Game-Hangman {
-  flex: .5 1 50%;
-  margin-top: -80px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
 }
 
 .Game-SideBySide {
   display: flex;
   flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Game-InputPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.Game-InputPanel .Game-Word {
+  text-align: center;
+}
+
+.Game-InputPanel .Game-AttemptsLeft {
+  text-align: center;
+}
+
+.Game-InputPanel .Game-VirtualKeyboard {
+  display: flex;
+  justify-content: center;
+}
+
+.Game-InputPanel .Game-GameWin,
+.Game-InputPanel .Game-GameOver {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.Game-InputPanel .Game-GameWin {
+  color: var(--success);
+}
+
+.Game-InputPanel .Game-GameOver {
+  color: var(--danger);
+}
+
+.Game-Hangman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Game-Hangman svg {
+  max-width: 280px;
+  height: auto;
 }

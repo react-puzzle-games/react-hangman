@@ -1,10 +1,19 @@
-.Word > span {
-  margin-right: 10px;
-  text-transform: uppercase;
-  font-size: 3em;
-  font-weight: 600;
+.Word {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-.Word > span:last-child {
-  margin-right: 0;
+.Word > span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 400;
+  background: var(--tile-color);
+  color: var(--text-light);
 }

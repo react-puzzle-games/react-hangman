@@ -4,13 +4,19 @@ import PropTypes from 'prop-types';
 const styles = {
   character: {
     fill: 'none',
-    stroke: 'black',
+    stroke: '#c4897a',
     strokeWidth: 3,
+    strokeLinecap: 'round',
   },
   post: {
     fill: 'none',
-    stroke: 'black',
-    strokeWidth: 10,
+    stroke: '#888',
+    strokeWidth: 8,
+    strokeLinecap: 'round',
+    strokeLinejoin: 'round',
+  },
+  head: {
+    fill: '#c4897a',
   },
 };
 
@@ -32,7 +38,7 @@ class Hangman extends Component {
 
   _renderHead() {
     return this.props.body
-        ? <circle cx="320" cy="190" r="40" fill="black" />
+        ? <circle cx="320" cy="190" r="40" style={styles.head} />
         : null;
   }
 

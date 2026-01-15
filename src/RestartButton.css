@@ -1,25 +1,26 @@
+.App-Restart {
+  margin-top: 16px;
+}
+
 .App-Restart > button {
-  border-radius: 8px;
-  padding: 6px 12px;
-  background: linear-gradient(to bottom, #ff6600 0%, #ff6600 100%);
-  font-weight: 300;
-  font-size: .6em;
+  padding: 10px 20px;
+  background: var(--tile-color);
+  font-weight: 400;
+  font-size: 0.85em;
   border: none;
-  color: #fff;
+  color: var(--text-light);
   cursor: pointer;
+  transition: background 0.15s ease;
 }
 
 .App-Restart > button:focus {
   outline: none;
 }
 
-.App-Restart > button:active {
-  box-shadow: inset 0px 1px 3px 2px rgba(0, 0, 0, 0.4);
-	cursor: pointer;
+.App-Restart > button:hover {
+  background: var(--tile-hover);
 }
 
-.App-Restart > button:hover {
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(to bottom, #000 0%, #000 100%);
+.App-Restart > button:active {
+  transform: scale(0.98);
 }
