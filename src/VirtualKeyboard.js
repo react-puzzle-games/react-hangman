@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import LettersRow from './LettersRow';
 import LetterBlock from './LetterBlock';
 import './VirtualKeyboard.css';

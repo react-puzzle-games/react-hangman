@@ -7,6 +7,7 @@ class AppFooter extends Component {
     return (
       <div className="App-footer">
         <a target="_blank"
+          rel="noopener noreferrer"
           href="https://github.com/ovidiubute/react-hangman"
         >
           <img src="github-10-xxl.png" width="30" height="30"
@@ -15,6 +16,7 @@ class AppFooter extends Component {
         </a>
         <h5>Made with <span style={{color: 'red'}}>&#9829;</span> by <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://ovidiu.dev">Ovidiu
           </a> using React and create-react-app boilerplate
         </h5>
