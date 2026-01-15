@@ -28,7 +28,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <AppHeader />
+        <AppHeader
+          onNewGame={this.onRestartClick}
+          guesses={this.state.guesses}
+          wrongGuesses={this.state.pastGuesses.filter(g => !this.state.word.includes(g)).length}
+        />
         <Game {...gameProps} />
         <AppFooter />
       </div>

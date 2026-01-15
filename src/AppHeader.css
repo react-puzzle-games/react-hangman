@@ -1,12 +1,52 @@
 .App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: var(--header-bg);
-  padding: 16px 24px;
+  padding: 12px 24px;
   border-bottom: 3px solid #4a9;
 }
 
 .App-header h2 {
   margin: 0;
-  font-size: 1em;
+  font-size: 0.95em;
   font-weight: 500;
   color: var(--text-light);
+}
+
+.App-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.App-header-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.8em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.15s ease;
+}
+
+.App-header-btn:hover {
+  color: #4a9;
+}
+
+.App-header-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-light);
+  font-size: 0.8em;
+  opacity: 0.9;
+}
+
+.App-header-icon {
+  font-size: 1.1em;
 }
