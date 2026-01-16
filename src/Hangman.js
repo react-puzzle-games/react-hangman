@@ -23,7 +23,7 @@ const styles = {
 class Hangman extends Component {
   render() {
     return (
-      <svg width="500" height="550">
+      <svg viewBox="0 0 500 550" preserveAspectRatio="xMidYMid meet">
         <polyline points="400,500 100,500 150,500 150,100 320,100 320,150"
                   style={styles.post} />
         {this._renderBody()}

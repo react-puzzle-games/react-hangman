@@ -53,9 +53,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 250px;
+  min-height: 300px;
 }
 
 .Game-Hangman svg {
-  max-width: 280px;
-  height: auto;
+  width: 250px;
+  height: 275px;
+}
+
+.Game-CheatIndicator {
+  margin-top: 8px;
+  font-size: 0.7em;
+  color: var(--danger);
+  font-weight: 600;
+  letter-spacing: 1px;
 }

@@ -14,15 +14,36 @@ class App extends Component {
 
     this.onLetterClick = this.onLetterClick.bind(this);
     this.onRestartClick = this.onRestartClick.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
 
     // Random word and new game state data
-    this.state = gameFactory.newGame();
+    this.state = {
+      ...gameFactory.newGame(),
+      cheatMode: false,
+    };
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  onKeyDown(e) {
+    // Ctrl+Shift+C to toggle cheat mode (reveal word)
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+      e.preventDefault();
+      this.setState(prevState => ({ cheatMode: !prevState.cheatMode }));
+    }
   }
 
   render() {
     const gameProps = {
       onLetterClick: this.onLetterClick,
       onRestartClick: this.onRestartClick,
+      cheatMode: this.state.cheatMode,
       ...this.state
     };
 
@@ -90,7 +111,10 @@ class App extends Component {
   onRestartClick(e) {
     e.preventDefault();
 
-    this.setState(gameFactory.newGame());
+    this.setState({
+      ...gameFactory.newGame(),
+      cheatMode: false,
+    });
   }
 }
 

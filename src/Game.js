@@ -70,7 +70,7 @@ class Game extends Component {
         <Word>
           {this.props.letters.map((letter, i) => {
             const letterValue = (
-              this.props.gameState === GAME_OVER || letter.guessed
+              this.props.cheatMode || this.props.gameState === GAME_OVER || letter.guessed
             ) ? letter.value : '_';
 
             return (
@@ -81,6 +81,7 @@ class Game extends Component {
             );
           })}
         </Word>
+        {this.props.cheatMode && <div className="Game-CheatIndicator">CHEAT MODE</div>}
       </div>
     );
   }
@@ -97,6 +98,7 @@ Game.propTypes = {
   pastGuesses: PropTypes.arrayOf(PropTypes.string).isRequired,
   onLetterClick: PropTypes.func.isRequired,
   onRestartClick: PropTypes.func.isRequired,
+  cheatMode: PropTypes.bool,
 }
 
 export default Game;
