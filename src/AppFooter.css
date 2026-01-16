@@ -12,9 +12,14 @@
 }
 
 .App-footer-github {
-  color: var(--text-light);
+  color: #ffffff;
   opacity: 0.8;
   transition: opacity 0.15s ease;
+}
+
+.App-footer-github svg {
+  display: block;
+  fill: #ffffff;
 }
 
 .App-footer-github:hover {
