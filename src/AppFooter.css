@@ -3,29 +3,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  padding: 20px;
+  gap: 10px;
+  padding: 24px 20px;
   background: var(--header-bg);
   font-size: 0.85em;
   color: var(--text-light);
   text-align: center;
 }
 
-.App-footer > a {
-  display: flex;
-  align-items: center;
-}
-
-.App-footer > a img {
-  filter: brightness(0) invert(1);
+.App-footer-github {
+  color: var(--text-light);
   opacity: 0.8;
+  transition: opacity 0.15s ease;
 }
 
-.App-footer > a:hover img {
+.App-footer-github:hover {
   opacity: 1;
 }
 
-.App-footer > h5 {
+.App-footer p {
   margin: 0;
   font-weight: 400;
+}
+
+.App-footer-heart {
+  color: var(--tile-color);
 }
