@@ -7,3 +7,9 @@
   font-weight: 600;
   color: var(--tile-color);
 }
+
+@media (max-width: 480px) {
+  .AttemptsLeft {
+    font-size: 0.85em;
+  }
+}

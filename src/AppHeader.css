@@ -50,3 +50,47 @@
 .App-header-icon {
   font-size: 1.1em;
 }
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px 16px;
+  }
+
+  .App-header h2 {
+    font-size: 0.85em;
+  }
+
+  .App-header-controls {
+    gap: 16px;
+  }
+
+  .App-header-btn,
+  .App-header-stat {
+    font-size: 0.75em;
+    gap: 4px;
+  }
+
+  .App-header-icon {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 8px 12px;
+  }
+
+  .App-header h2 {
+    font-size: 0.8em;
+  }
+
+  .App-header-controls {
+    gap: 12px;
+  }
+
+  .App-header-btn,
+  .App-header-stat {
+    font-size: 0.7em;
+    gap: 3px;
+  }
+}

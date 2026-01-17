@@ -69,3 +69,62 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+@media (max-width: 768px) {
+  .Game-content {
+    padding: 24px 16px;
+  }
+
+  .Game-SideBySide {
+    gap: 32px;
+  }
+
+  .Game-InputPanel {
+    gap: 20px;
+  }
+
+  .Game-Hangman {
+    min-width: 200px;
+    min-height: 250px;
+  }
+
+  .Game-Hangman svg {
+    width: 200px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Game-content {
+    padding: 16px 12px;
+  }
+
+  .Game-SideBySide {
+    gap: 24px;
+    flex-direction: column-reverse;
+  }
+
+  .Game-InputPanel {
+    gap: 16px;
+    width: 100%;
+  }
+
+  .Game-Hangman {
+    min-width: 160px;
+    min-height: 200px;
+  }
+
+  .Game-Hangman svg {
+    width: 160px;
+    height: 176px;
+  }
+
+  .Game-InputPanel .Game-GameWin,
+  .Game-InputPanel .Game-GameOver {
+    font-size: 0.9em;
+  }
+
+  .Game-CheatIndicator {
+    font-size: 0.65em;
+  }
+}

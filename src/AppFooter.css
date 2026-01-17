@@ -34,3 +34,23 @@
 .App-footer-heart {
   color: var(--tile-color);
 }
+
+@media (max-width: 768px) {
+  .App-footer {
+    padding: 20px 16px;
+    font-size: 0.8em;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-footer {
+    padding: 16px 12px;
+    font-size: 0.75em;
+    gap: 6px;
+  }
+
+  .App-footer p {
+    line-height: 1.4;
+  }
+}
