@@ -17,3 +17,35 @@
   background: var(--tile-color);
   color: var(--text-light);
 }
+
+@media (max-width: 768px) {
+  .Word > span {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .Word {
+    gap: 3px;
+  }
+
+  .Word > span {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 360px) {
+  .Word {
+    gap: 2px;
+  }
+
+  .Word > span {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95em;
+  }
+}

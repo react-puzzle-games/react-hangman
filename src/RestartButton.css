@@ -24,3 +24,14 @@
 .App-Restart > button:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 480px) {
+  .App-Restart {
+    margin-top: 12px;
+  }
+
+  .App-Restart > button {
+    padding: 8px 16px;
+    font-size: 0.8em;
+  }
+}

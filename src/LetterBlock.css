@@ -22,3 +22,36 @@
   font-weight: 400;
   font-size: 0.9em;
 }
+
+@media (max-width: 768px) {
+  .LetterBlock {
+    width: 36px;
+    height: 36px;
+  }
+
+  .LetterBlock > span {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .LetterBlock {
+    width: 32px;
+    height: 32px;
+  }
+
+  .LetterBlock > span {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  .LetterBlock {
+    width: 28px;
+    height: 28px;
+  }
+
+  .LetterBlock > span {
+    font-size: 0.75em;
+  }
+}
